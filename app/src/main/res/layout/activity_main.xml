@@ -7,8 +7,20 @@
     tools:context="com.main.picassodemo.MainActivity">
 
     <ImageView
-        android:id="@+id/test_image"
+        android:id="@+id/test_image1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/test_image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_image1"/>
+
+    <ImageView
+        android:id="@+id/test_image3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/test_image2"/>
 
 </RelativeLayout>

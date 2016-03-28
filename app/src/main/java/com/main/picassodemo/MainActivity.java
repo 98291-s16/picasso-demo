@@ -15,12 +15,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         loadPicassoDemo();
+        resizeDemo();
+        rotateDemo();
     }
 
     private void loadPicassoDemo() {
-        ImageView im = (ImageView) findViewById(R.id.test_image);
+        ImageView im = (ImageView) findViewById(R.id.test_image1);
         Picasso.with(this)
                 .load(IMG_URL)
+                .into(im);
+    }
+
+    private void resizeDemo() {
+        ImageView im = (ImageView) findViewById(R.id.test_image2);
+        Picasso.with(this)
+                .load(IMG_URL)
+                .resize(70, 70)
+                .into(im);
+    }
+
+    private void rotateDemo() {
+        ImageView im = (ImageView) findViewById(R.id.test_image3);
+        Picasso.with(this)
+                .load(IMG_URL)
+                .rotate(180)
                 .into(im);
     }
 
